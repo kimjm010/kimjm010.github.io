@@ -99,7 +99,7 @@
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
 						   					<!-- <h1>Hi! <br>I'm Server Developer</h1> -->
-						   					<h1>안녕하세요.</h1>
+						   					<h1>안녕하세요. 열정 넘치는 iOS개발자입니다.</h1>
 											</div>
 					   				</div>
 					   			</div>
@@ -113,7 +113,7 @@
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
-						   					<h1>끊임없이 "왜"라는<br>질문에 대한<br>답을 찾으려는 개발자, 김정민입니다.</h1>
+						   					<h1>끊임없이 "왜"라는<br>질문에 대한<br>답을 찾으려는 개발자 김정민입니다.</h1>
 											</div>
 					   				</div>
 					   			</div>
@@ -174,12 +174,12 @@
 								<br>
 								AutoLayout에 대한 이해가 있으며 Code 및 StoryBoard를 통해 UI를 구성할 수 있습니다.(익숙한 방식은 StoryBoard이지만 현재 Code로만 UI를 구성하기 위한 공부를 하고있습니다.)
 								<br>
-								동기, 비동기 프로그래밍 방식을 이해하고 있으며 Dispatch Queue를 프로젝트에 적용하여 사용자 경험을 향상시키기 위한 앱을 제작할 수 있습니다.
+								동기, 비동기 프로그래밍 방식을 이해하고 있으며 Dispatch Queue를 프로젝트에 적용하여 효율적으로 동작하는 앱을 제작할 수 있습니다.
 								<br>
 								CocoaPods를 이용해 외부 라이브러리를 활용할 수 있습니다.
 								<p></p>
 								<p>
-									사용해본 라이브러리 목록: Loaf, Progress HUD, Gallery, RxSwift, RxCocoa, Moya/RxSwitf 등
+									사용해본 라이브러리 목록: Loaf, Progress HUD, Gallery, SnapKit, Then, RxSwift, RxCocoa, Moya/RxSwitf 등
 								</p>
 							</div>
 						</div>
@@ -211,7 +211,7 @@
 								    <span>30%</span>
 								  	</div>
 								</div>
-								비전공자로서 단순히 Code만 작성하는 개발자가 아닌 문제를 다양한 각도에서 분석할 수 있으며, 근복적인 해결을 위해 기본적인 CS지식을 습득하기 위해 노력하고 있습니다.
+								비전공자로서 단순히 Code만 작성하는 개발자가 아닌 문제를 다양한 각도에서 분석할 수 있으며, 근복적인 해결을 위한 CS지식을 보충하기 위해 노력하고 있습니다.
 								<br>
 								현재 대한민국 평생교육원에서 진행하는 컴퓨터공학 강의를 듣고 있습니다.(종강 10월 24일)
 								<p></p>
@@ -255,7 +255,7 @@
 							<div class="project" style="background-image: url(images/img-3.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="https://github.com/kimjm010/startToEnd" target="_blank" > StartToEnd(2021.12 ~2022.08)</a></h3>
+										<h3><a href="https://github.com/kimjm010/startToEnd" target="_blank" > StartToEnd(2021.12 ~ )</a></h3>
 										<span> 계획적인 또는 해야할 일을 까먹는 사람들을 위한 앱
 											<br>
 											평소 업무를 리스트업하여 업무의 우선순위를 알 수 있는 앱입니다.
@@ -263,6 +263,8 @@
 											* 핵심 구현 사항
 											<br>
 											• CoreData를 이용한 해야할 업무 저장
+											• 기존에 작업했던 MVC 패턴에서 MVVM패턴 적용
+											• RxSwift로 코드 변경
 										</span>
 										<p class="icon">
 											<!-- <span><a href="#"><i class="icon-share3"></i></a></span> -->
@@ -272,12 +274,100 @@
 								</div>
 							</div>
 						</div>
-					
+					<div class="row">
+						<div class="col-md-12 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="timeline-centered">
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>가개 정보 필터링 기능</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
+
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>가개 정보 필터링 기능</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
+
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>가개 정보 필터링 기능</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 							<div class="project" style="background-image: url(images/img-2.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="https://github.com/kimjm010/elecCarChareInfo" target="_blank">전기차충전소(2022.08~)</a></h3>
+										<h3><a href="https://github.com/kimjm010/elecCarChareInfo" target="_blank">전기차충전소(2022.08 ~)</a></h3>
 										<span>전기차 충전소 위치 및 정보 알림 어플</span>
 										<br>
 										* 핵심 구현 사항
@@ -290,6 +380,94 @@
 											<!-- <span><a href="#"><i class="icon-share3"></i></a></span> -->
 											<span><a href="https://github.com/kimjm010/elecCarChareInfo" target="_blank"><i class="icon-eye"></i> detail</a></span>
 										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="timeline-centered">
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>가게 정보 필터링 기능</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
+
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>가개 정보 필터링 기능</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
+
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>가개 정보 필터링 기능</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -328,7 +506,6 @@
 							</div>
 						</div>
 					</div>
-					<strong>프로젝트를 하면서 어려웠던 점과 해결 방안</strong>
 					<div class="row">
 						<div class="col-md-12 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
 							<div class="fancy-collapse-panel">
@@ -456,7 +633,7 @@
 									<i class="icon-home"></i>
 								</span>
 								<div class="desc">
-									<h3>국립국제교육원 영어강사</h3>
+									<h3>국립국제교육원 영어 보조강사</h3>
 									<p>국립국제교육원에서 진행하는 "EPIK"프로그램의 영어강사로 활동하여 국내 초,중,고등학교에서 영어를 가려쳐줄 외국인 선생님의 한국 문화적응을 도왔습니다.</p>
 								</div>
 							</div>
@@ -517,7 +694,7 @@
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="https://mittelstand.co.kr/" target="_blank">주)미텔슈탄트 서비스 영업</a> <span>2018.03~2018.05</span></h2>
+					               	<h2><a href="https://mittelstand.co.kr/" target="_blank">국립국제교육원 영어 보조강사</a> <span>2020.02</span></h2>
 					                  <p>모바일 편의점 서비스 "요닝" 영업 총괄을 하였습니다. 회사 내에서 모바일 편의점 서비스 "요닝"을 준비하였고 그동안의 경험을 살려 회사 영업 업무로 입사하였습니다. 입사하여 점수 영업 및 라이더스 영업에 대한 전략을 세우고 영업활동을 하였습니다. 앱 출시 전에 편의점 점주들을 만나며 초기 운영을 위한 점주들을 영업하였고, 요닝 서비스 운영을 위한 라이더스들을 만나서 영업하였습니다. 기존에 해오던 BtoC 영업이 아니라 BtoB영업으로 바뀌면서 어려움을 겪기도 하였지만, 전체적인 흐름을 읽어가며 하나하나 개선해나갔습니다. </p>
 					               </div>
 					            </div>
@@ -529,32 +706,8 @@
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="http://www.riceplanner.com" target="_blank">주식회사 파블 운영</a> <span>2015.11~2018.01</span></h2>
+					               	<h2><a href="http://www.riceplanner.com" target="_blank">HMM</a> <span>2016.06 ~ 2020.02</span></h2>
 					                  <p>주식회사 파블은 "For A Better Life"라는 비전을 가지고 세워진 회사입니다. 사람들에게 좀 더 나은 삶을 주기 위해 노력하였고, 청춘정미소를 운영하며 우리의 주식인 "쌀"을 통해 사람들에게 건강한 삶을 주기 위해 노력하였습니다. "즉미구독"서비스를 통해 4평의 매장에서 2000명의 회원들을 관리하며 성장하였고, 이후에 라이스플래너들이 활동하며 개인의 특성 및 체질에 맞는 잡곡들을 직접 블랜딩하여 제안하였습니다. 회사보다는 고객들에게 집중하며, 고객들의 문제들을 직접 이야기 들으며 해결하기 위해 노력하였습니다.</p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-4">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="http://www.storyofseoul.com/news/articleView.html?idxno=2257" target="_blank">4남매농장</a> <span>2013.09~2016.02</span></h2>
-					                  <p>4남매농장은 집안에서 생산한 농산물을 온라인사이트를 통해 판매하였습니다. 처음 사업을 접하면서 사업자등록부터 시작하여 상표등록, 제품디자인, 고객관리, 회계관리, 배송관리 등 전체적인 흐름을 익힐 수 있었습니다. 또한 온라인사이트를 홍보하기 위해 어떻게 해야 하는지 온/오프라인 마케팅에 대해서도 전체적으로 배울 수 있었습니다. 2년 동안 3000명 이상의 회원들을 확보하였고, 직접 BtoC 영업을 경험해 볼 수 있었습니다. </p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-5">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#" onclick="return false;">대한민국 농부</a> <span>1998~2018</span></h2>
-					                  <p>농촌에서 4남매 중 셋째로 태어나서 자라며 7살 때부터는 아버지를 따라 농사일을 다녔습니다. 새벽 4시에 일어나서 농사일을 하고 7시면 학교에 갔다가 학교를 다녀오면 또 농사일을 가는 생활의 반복이었습니다. 주말과 방학을 제일 싫어하였고(온종일 일해야 하므로) 그 생활은 고등학생까지 이어졌습니다. 그리고 아직도 시간이 괜찮을 때나, 집에 농사일이 바쁠 때는 주말에 내려가 농사일을 돕고 있습니다. 제가 제일 싫어했던 농사일이지만 농사를 통해 "뿌린 만큼 거둔다"라는 말의 의미와 노력, 그리고 정직이라는 것을 몸소 배울 수 있었습니다. 웬만한 농기계는 모두 몰 수 있으며, 이제 20년차 가 되어 농부들과 이야기해도 소통이 되며, 혼자서도 농사를 지어낼 수 있습니다. 이를 바탕으로 회사에서도 꾸준히 성장할 수 있도록 노력하겠습니다. </p>
 					               </div>
 					            </div>
 					         </article>
@@ -586,7 +739,7 @@
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingOne">
 									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">FASTCAMPUS WEBPROGRAMMING SCHOOL
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">KXCODING IOS MAESTRO CAMP 2021
 									            </a>
 									        </h4>
 									    </div>
@@ -594,8 +747,8 @@
 									         <div class="panel-body">
 									            <div class="row">
 										      		<div class="col-md-4">
-										      			<p>패스트캠퍼스 웹프로그래밍 스쿨 수강 <br>
-										      			2019.03 - 현재</p>
+										      			<p>kxCoding iOS Maestro Camp <br>
+										      			2021.05 - 2021.12</p>
 										      			
 										      		</div>
 										      		<div class="col-md-8">
@@ -605,32 +758,11 @@
 									         </div>
 									    </div>
 									</div>
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingTwo">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">CODESTATES PRE COURSES 
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									        <div class="panel-body">
-									            <div class="row">
-										      		<div class="col-md-4">
-										      			<p>코드스테이츠 프리과정 수강<br>
-										      			2019.01 - 2019.03</p>
-										      			
-										      		</div>
-										      		<div class="col-md-8">
-										      			<p>코드스테이츠 온라인 프리과정을 수강하였습니다. 수강을 하며 javascript언어에 대해 배우며 프로그래밍에 대한 기본적인 지식 및 알고리즘에 대한 많은 문제들을 접하였습니다. 또한 팀 페어 활동을 통해 다른 사람과 소통하며 프로그래밍하는 것의 중요성에 대해 배울 수 있었습니다.</p>
-										      		</div>
-										      	</div>
-									        </div>
-									    </div>
-									</div>
+
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingThree">
 									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">KNU UNIVERSITY
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Mokpo National Maritime UNIVERSITY
 									            </a>
 									        </h4>
 									    </div>
@@ -638,8 +770,8 @@
 									        <div class="panel-body">
 									           <div class="row">
 										      		<div class="col-md-4">
-										      			<p>경북대학교 농업경제학과 졸업<br>
-										      			2010.03 - 2017.08</p>
+										      			<p>목포해양대학교<br>
+										      			2012.03 - 2016.01</p>
 										      			
 										      		</div>
 										      		<div class="col-md-8">
@@ -649,53 +781,7 @@
 									        </div>
 									    </div>
 									</div>
-
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFour">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">SOLIVE
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-									        <div class="panel-body">
-									           <div class="row">
-										      		<div class="col-md-4">
-										      			<p>창업연구회 Solive 창업세미나 수료<br>
-										      			2013.09 - 2015.02</p>
-										      			
-										      		</div>
-										      		<div class="col-md-8">
-										      			<p>창업연구회 솔라이브의 2기 회원 및 3대 회장으로 활동하며 매주 2회씩 교육세미나를 진행하였습니다. 창업을 위한 전반적인 지식부터 마케팅, 회계, 브랜딩, 린스타트업 등 창업에 필요한 다양한 교육들을 수강할 수 있었습니다. 또한 회장으로 연구회를 운영하며 Mini벤처 활동을 통해 아이템들을 직접 기획하고 실제 수익까지 발생시키는 프로그램을 진행하였습니다. 현재 창업연구회 솔라이브 정회원으로 후배 양성을 위해 활동 중입니다.</p>
-										      		</div>
-										      	</div>
-									        </div>
-									    </div>
-									</div>
 	
-
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFive">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">YOUNG-SHIN HIGH SCHOOL
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-									        <div class="panel-body">
-									            <div class="row">
-										      		<div class="col-md-4">
-										      			<p>포항영신고등학교<br>
-										      			2007.03 - 2010.02</p>
-										      			
-										      		</div>
-										      		<div class="col-md-8">
-										      			<p>고등학교 시절은 저의 성격에 대해서 가장 많은 부분 완성한 시기입니다. 친구들과 허물없이 지내며 이야기하고, 서로의 미래에 관해 이야기하였습니다. 또한 실장을 도맡아 하면서 반을 하나로 뭉치며 잘 이끌어나가는 방법에 대해서도 배울 수 있었습니다. 학교 축제 사회 및 아침 방송 DJ 등을 맡으며 저의 다른 면모에 대해서도 알 수 있었습니다. 선생님 및 학우들과 원만한 교우 관계를 형성하여 기억에 남는 학교생활을 했습니다.</p>
-										      		</div>
-										      	</div>
-									        </div>
-									    </div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -719,19 +805,9 @@
 							<div class="blog-entry">
 								<a href="https://fabl1106.github.io" target="_blank" class="blog-img"><img src="images/blog-1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
 								<div class="desc">
-									<span><small>since 2019.01 </small> | <small> 개발 블로그 운영</small> </span>
-									<h3><a href="https://fabl1106.github.io" target="_blank">대구올빼미의 새벽 개발로그</a></h3>
-									<p>29살의 조금 늦은 나이로 개발에 입문하였지만 어제보다 조금 더 성장하자는 목표를 가지고 개발 블로그를 지속적으로 운영해오고 있습니다.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="blog-entry">
-								<a href="https://www.youtube.com/channel/UCw9t6aprCOnNfK16Zjpp6bQ?view_as=subscriber" target="_blank" class="blog-img"><img src="images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>since 2019.04 </small> | <small>개발 유튜브 채널 운영 </small></span>
-									<h3><a href="https://www.youtube.com/channel/UCw9t6aprCOnNfK16Zjpp6bQ?view_as=subscriber" target="_blank">대구올빼의 유튜브 </a></h3>
-									<p>유튜브 채널을 운영하며 배운 것들을 정리해서 영상을 촬영하고 있습니다. 개인적으로 복습을 한번 더 하는 장점이 있습니다.</p>
+									<span><small>since 2022.08 </small> | <small> 개발 블로그 운영</small> </span>
+									<h3><a href="https://chris-kim.tistory.com" target="_blank">끄리스</a></h3>
+									<p>프로그래밍 뿐만 아니라 다양한 분야를 공부하면서 느낀것은 본인이 알고 있는 개념을 다른 사람에게 설명해줄 때 진정한 '나의 지식'이 된다고 느낀 후 기존에 학습한 내용과 새롭게 배운 내용을 정리하기 위해 운영하고 있습니다.</p>
 								</div>
 							</div>
 						</div>
@@ -739,8 +815,8 @@
 							<div class="blog-entry">
 								<a href="#" onclick="return false;" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
 								<div class="desc">
-									<span><small>since 2019.03 </small> | <small> 개발 관련 행사 참가 </small></span>
-									<h3><a href="#" onclick="return false;">SEF2019/구글IO/엔잴핵해커톤</a></h3>
+									<span><small>at 2019.08 </small> | <small> HMM 항해사로서 MBC에 출연 </small></span>
+									<h3><a href="https://youtu.be/w3MjfijoRdc" target="_blank">HMM 2등항해사</a></h3>
 									<p>개발 관련 정보들을 얻고, 개발자들을 만나기 위해 관련 행사들을 지속적으로 참가해오고 있습니다.</p>
 								</div>
 							</div>
@@ -769,7 +845,7 @@
 									<i class="icon-globe-outline"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>deaguowl@gmail.com</p>
+									<p>kimjm010@icloud.com</p>
 								</div>
 							</div>
 
@@ -778,7 +854,7 @@
 									<i class="icon-map"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>서울특별시 성동구 성수동2가</p>
+									<p>서울특별시 관악구 신림동</p>
 								</div>
 							</div>
 
@@ -787,7 +863,7 @@
 									<i class="icon-phone"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>+82 10 4920 3508</p>
+									<p>+82 10 9481 9358</p>
 								</div>
 							</div>
 
@@ -796,7 +872,7 @@
 									<i class="icon-layers2"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="https://github.com/fabl1106" target="_blank">https://github.com/fabl1106</a></p>
+									<p><a href="https://github.com/kimjm010" target="_blank">Github Repo</a></p>
 								</div>
 							</div>
 
