@@ -314,19 +314,19 @@
 														</div>
 														<div class="timeline-label">
 															<h2>
-																<a>가개 정보 필터링 기능</a>
+																<a>코어 데이터에 저장한 Todo 객체 업데이트</a>
 															</h2>
 															<p>
 																<strong>• 문제: </strong>
-																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+																코어 데이터 저장한 Todo객체를 업데이트할 때 각 항목을 업데이트하는 메소드를 하나하나 선언해서 업데이트 해서 Todo객체를 업데이트 하는데 충돌이 발생하고 정상적으로 데이터가 업데이트 되지 않았습니다.
 															</p>
 															<p>
 																<strong>• 해결방안: </strong>
-																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+																각 항목(isCompleted, isMarked, isReminder, isNoti)를 업데이트하는 메소드를 하나로 통일하고 각 파라미터를 옵셔널 형식으로 선언하여 업데이트 되지 않은 항목은 무시하도록 구현했습니다. 
 															</p>
 															<p>
 																<strong>• 관련 코드:</strong>
-																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+																<a href="https://www.notion.so/Core-Data-Todo-Object-Update-Method-f688a57e35e3472ea668e8fe9a9271d3" target="_blank"> https://www.notion.so/Core-Data-Todo-Object-Update-Method-f688a57e35e3472ea668e8fe9a9271d3</a>
 															 </p>
 														</div>
 													</div>
