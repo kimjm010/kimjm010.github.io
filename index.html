@@ -288,19 +288,20 @@
 														</div>
 														<div class="timeline-label">
 															<h2>
-																<a>가개 정보 필터링 기능</a>
+																<a>코어 데이터 사용</a>
 															</h2>
 															<p>
 																<strong>• 문제: </strong>
-																테이블 뷰 셀에 선택된 필터링 항목을 뷰컨트롤러에 가져오는 과정에서 셀에 있는 데이터가 뷰컨트롤러로 잘 전달되지 않았습니다.
+																앱 데이터를 저장하고 필요할 때 불러와서 화면에 표시할 수 있는 여러가지 프레임워크 중 어떠한 프레임워크를 써야할지 많은 고민을 했습니다. 고민을 하면서 실제로 다양한 방법의 앱 데이터를 저장하는 방법을 공부할 수 있었습니다.
 															</p>
 															<p>
 																<strong>• 해결방안: </strong>
-																cellForRow(at:) 메소드를 이용해 해당 IndexPath에 있는 테이블뷰 셀을 가져온 후 셀에 접근해서 데이터를 가져오는 것으로 해결했습니다. 셀에 직접 접근해서 처리하는 것은 마지막 수단으로 남겨둬야 한다고 배웠습니다. 하지만 notification, 델리게이트 패턴 등 여러 가지 방법을 시도해본 결과, 해결되지 않았기 때문에 직접 접근하는 방법을 사용했습니다. 
+																UserDefaults, KeyChain, FileManager, CoreData 등 애플에서 제공하는 프레임워크 외에 Firebase와 Realm을 공부하면서 어떠한 프레임워크를 써야할까 많은 고민을 했습니다.
+																먼저 각 프레임워크가 제공하는 기본적인 기능을 기준으로 프레임워크를 분류하여 앱을 가장 효율적으로 구동할 수 있는 방법인 CoreData 프레임워크를 사용하여 앱 데이터를 저장하고 필요한 시점에 저장한 데이터를 불러오도록 구현했습니다.
 															</p>
 															<p>
 																<strong>• 관련 코드:</strong>
-																<a href="https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad" target="_blank"> https://wiggly-subway-73d.notion.site/3c6ed33f38384ed2ae9567a326a433ad</a>
+																<a href="https://www.notion.so/Core-Data-Code-983221938db04d1abf7697798ff3fd7f" target="_blank"> https://www.notion.so/Core-Data-Code-983221938db04d1abf7697798ff3fd7f</a>
 															 </p>
 														</div>
 													</div>
