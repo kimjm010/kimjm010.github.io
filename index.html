@@ -276,6 +276,8 @@
 																	<br>
 																	• 기존에 작업했던 MVC 패턴에서 MVVM패턴 적용(RxSwift 활용)
 																	<br>
+																	• Notification을 통한 이벤트 전달하는 코드를 
+																	<br>
 																	• 작업 기간: 2021.11.27 - 2022.01.05(약 1.3개월) / 2022.08 - Present (Rx, MVVM 리팩토링)
 																</p>
 																
@@ -376,6 +378,41 @@
 														</div>
 													</div>
 												</article>  
+
+												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
+													<div class="timeline-entry-inner">
+														<div class="timeline-icon color - 2">
+															<i class="icon-pen2"></i>
+														</div>
+														<div class="timeline-label">
+															<h2>
+																<a>Rx 이벤트 전달을 통한 이벤트 처리</a>
+															</h2>
+															<p>
+																<strong>• 문제: </strong>
+																기존 코드에서 Notification을 통해 이벤트를 전달했습니다. 하지만 Rx에서는 Notificationㅇ
+																<br>
+															</p>
+															<p>
+																<strong>• 해결방안: </strong>
+																Apple에서 제공하는 공식 문서를 읽고 정리햇습니다. 그리고 제공하는 코드를 통해 어떠한 흐름으로 로직이 실행이되는지 분석하여 개인 프로젝트에 적용했습니다.
+															</p>
+															<p>
+																<strong>• 관련 코드:</strong>
+																<a href="https://cheddar-jar-211.notion.site/Local-Notification-Code-d474be29e46d4d5a8435a44b86839d65" target="_blank"> Local Notification 적용 Code
+																</a>
+																<br>
+																<strong>• Local Notification 정리:</strong>
+																<a href="https://cheddar-jar-211.notion.site/Local-Notification-e1763cf5172c4eccba5b6c3168a09cb3" target="_blank"> Local Notification
+																</a>
+																<br>
+																<strong>• Push Notification 정리:</strong>
+																<a href="https://cheddar-jar-211.notion.site/Push-Notification-f0cbb051c38d4b9bbac3713665a0c31d" target="_blank"> Push Notification
+																</a>
+															 </p>
+														</div>
+													</div>
+												</article> 
 
 												<article class="timeline-entry animate-box fadeInRight animated" data-animate-effect="fadeInRight">
 													<div class="timeline-entry-inner">
@@ -702,9 +739,9 @@
 						</div>
 					</div>
 
-					<iframe width="400" height="500" 
-					src="https://www.youtube.com/embed/754SP1JV5QQ" 
-					title="EventPopup" 
+					<iframe width="560" height="315" 
+					src="https://www.youtube.com/embed/7SYK4K3T0sc" 
+					title="YouTube video player" 
 					frameborder="0" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 					</iframe>
@@ -804,7 +841,7 @@
 															</h2>
 															<p>
 																<strong>• 문제: </strong>
-																RxSwift로 리패토릭하는 과정에서 라이브러리(RxAudioVisual)에서 제공하지 않은 기능들이 있어 플레이어의 빨리감기, 되감기, 10초 앞뒤로 이동 등의 기능을 구현하는데 어려움을 겪었습니다.
+																RxSwift로 리패토링하는 과정에서 라이브러리(RxAudioVisual)에서 제공하지 않은 기능들이 있어 플레이어의 빨리감기, 되감기, 10초 앞뒤로 이동 등의 기능을 구현하는데 어려움을 겪었습니다.
 															</p>
 															<p>
 																<strong>• 해결방안: </strong>
@@ -826,7 +863,7 @@
 														</div>
 														<div class="timeline-label">
 															<h2>
-																<a>직접 구현한 기능 작동 불가</a>
+																<a>플레이어 컨트롤 기능 오류</a>
 															</h2>
 															<p>
 																<strong>• 문제: </strong>
@@ -834,7 +871,7 @@
 															</p>
 															<p>
 																<strong>• 해결방안: </strong>
-																MP4플레이어 화면에 진입할 때, viewDidLoad()에서 AVQueuePlayer의 currentItem을 구독하여 currentItem을 구독하고 currentItem을 파라미터로 전달하여 subscribeCurrentItem(_:)메소드를 호출하는 로직으로 문제를 해결했습니다.
+																MP4플레이어 화면에 진입할 때, viewDidLoad()에서 AVPlayer의 currentItem을 구독하고 currentItem을 파라미터로 전달하여 subscribeCurrentItem(_:)메소드를 호출하는 로직으로 문제를 해결했습니다.
 															</p>
 															<p>
 																<strong>• 관련 코드:</strong>
@@ -875,7 +912,6 @@
 															<h2>
 																<a href="https://github.com/kimjm010/elecCarChareInfo" target="_blank">이벤트 팝업</a>
 															</h2>
-															<br>
 															• 팝업 창 바깥 화면을 탭하면 팝업창이 닫힘
 															<br>
 															• 다시 보지 않기 버튼 탭한 경우 앱을 껏다 켜도 팝업창이 보이지 않음
@@ -1246,7 +1282,7 @@
 										      			<p>
 															핸드폰을 소유하지 않은 사람은 한 명도 없고 결국 모바일 애플리케이션이 가까운 미래에 각광받는 분야가 될 것이라고 생각했습니다. 그 중에서도 남들이 많이 선택하지 않는 개발 분야를 공부하고 싶다는 생각으로 iOS 개발 공부를 시작했습니다.
 															<br>
-															KxCoding 캠프를 수강하며 전반적인 iOS 앱 개발과 효율적인 코드를 작성하는 방법, 공식 문서 보는 방법과 문서화 중요성을 배웠습니다. 또한, 팀 프로젝트를 진행하면서 Git의 전반적인 사용법과 팀원과 커뮤니케이션하는 방법을 배웠습니다. 캠프를 통해 iOS 앱을 개발하는 전체적인 과정을 경험했습니다.
+															KxCoding 캠프를 수강하며 전반적인 iOS 앱 개발과 효율적인 코드를 작성하는 방법, 공식 문서 보는 방법과 문서화의 중요성을 배웠습니다. 또한, 팀 프로젝트를 진행하면서 Git의 전반적인 사용법과 팀원들과 커뮤니케이션하는 방법을 배웠습니다.
 														</p>
 										      		</div>
 										      	</div>
@@ -1274,7 +1310,7 @@
 															목포해양대학교에서 항해학과 해양 안전 정책학을 복수전공 했습니다. 졸업 후 HMM에 입사하여 4년 
 															8개월간 항해사로 일을 했습니다. 
 															<br>
-															목포해양대학교에서 4년동안 공부하면서 1번의 과대표가 2번의 과부대표 역할을 했습니다. 또한, 4번의 성적우수 장학금을 받기도 했습니다.
+															목포해양대학교에서 4년동안 공부하면서 1번의 과대표와 2번의 과부대표 역할을 했습니다. 또한, 4번의 성적우수 장학금을 받기도 했습니다.
 															<br>
 															학부생활을 하면서 축구동아리에서 활동을 했으며, 목포시 축구대회 및 졸업생 축구대회에 참가하였습니다.
 														</p>
@@ -1289,36 +1325,48 @@
 					</div>
 				</div>
 			</section>
-
-			
 			
 			<section class="colorlib-blog" data-section="blog">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">self-improvement</span>
-							<h2 class="colorlib-heading">BLOG and YOUTUBE</h2>
+							<h2 class="colorlib-heading">BLOG, Notion and YOUTUBE</h2>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">
-								<a href="#" onclick="return false;" class="blog-img"><img src="images/blog-2.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<a href="https://chris-kim.tistory.com" onclick="return true;" class="blog-img"><img src="images/blog-2.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
 								<div class="desc">
 									<span><small>since 2022.08 </small> | <small> 개발 블로그 운영</small> </span>
 									<h3><a href="https://chris-kim.tistory.com" target="_blank">끄리스</a></h3>
-									<p>프로그래밍 뿐만 아니라 다양한 분야를 공부하면서 느낀것은 본인이 알고 있는 개념을 다른 사람에게 설명해줄 때 진정한 '나의 지식'이 된다고 느꼈습니다. 그래서 기존에 학습한 내용과 새롭게 배운 내용을 정리하고 배운 내용을 공유하기 위해 블로그를 운영하고 있습니다.</p>
+									<p>프로그래밍 뿐만 아니라 다양한 분야를 공부하면서 느낀것은 본인이 알고 있는 개념을 다른 사람에게 설명해줄 때 진정한 '나의 지식'이 된다고 느꼈습니다. 그래서 배운 내용을 공유하기 위해 블로그를 운영하고 있습니다.</p>
 								</div>
 							</div>
 						</div>
+
 						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">
-								<a href="#" onclick="return false;" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<a href="https://cheddar-jar-211.notion.site/ee3903ffa22e42f79c5c7853f4de14d9?v=1631531c12b944b4a21177ee488ee5ce" onclick="return true;" class="blog-img">
+									<img class="img-responsive" src="images/Notion.jpeg" alt="HTML5 Bootstrap Template by colorlib.com">
+								</a>
 								<div class="desc">
-									<span><small>at 2019.08 </small> | <small> HMM 항해사로서 MBC에 출연 </small></span>
+									<span><small>since 2021.06 </small> | <small> 공부한 내용 기록</small> </span>
+									<h3><a href="https://cheddar-jar-211.notion.site/ee3903ffa22e42f79c5c7853f4de14d9?v=1631531c12b944b4a21177ee488ee5ce" target="_blank">크리스 노션</a></h3>
+									<p>프로그래밍을 하면서 문제해결 및 개념을 정리하는데 어려움을 겪었던 부분을 노션에 정리하여 이후에 비슷한 어려움에 직면했을 때 제가 정리한 내용을 참고하기 위해 꾸준하게 관리하고 있습니다.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="https://youtu.be/w3MjfijoRdc" onclick="return true;" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>2019.08 </small> | <small> MBC 출연 </small></span>
 									
 									<h3><a href="https://youtu.be/w3MjfijoRdc" target="_blank">MBC 특집 "빅캐리어" 출연</a></h3>
-									<p>항해사로 일을 하면서 MBC에서 선박을 통한 물류 운송과정을 촬영을 위해 출연했습니다.</p>
+									<p>항해사로 일을 하면서 MBC에서 선박을 통한 물류 운송의 전반적인 과정을 촬영했습니다.</p>
 								</div>
 							</div>
 						</div>
